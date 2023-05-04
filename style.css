@@ -1,0 +1,135 @@
+/*Configuraciones universales para las etiquetas*/
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@300;400;600;700&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+    --bg-main: #fff;
+    --bg-search: rgb(214, 214, 214);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    background-color: aquamarine;
+    width: 100%;
+    position: fixed;
+}
+
+header #navbar-pinterest {
+    background-color: var(--bg-main);
+    height: 55px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+header #navbar-pinterest #nav_left {
+    background-color: rgb(255, 255, 255);
+    width: 250px;
+    max-width: 250px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+header #navbar-pinterest #nav_left div {
+    width: 100%;
+}
+
+/*header #navbar-pinterest #nav_left div:hover {
+    background-color: black;
+    color: #fff;
+}*/
+
+header #navbar-pinterest #nav_left a:hover {
+    background-color: black;
+    color: #fff;
+}
+
+/*header #navbar-pinterest #nav_left #pinterest-icon {
+    margin: 0 auto;
+}*/
+
+header #navbar-pinterest #nav_left #pinterest-icon:hover {
+    background-color: #fff;
+}
+
+header #logo_Pinterest {
+    width: 25px;
+}
+
+header #logo_Pinterest:hover {
+    background-color: red;
+    border-radius: 50%;
+}
+
+header #navbar-pinterest #nav_left div a {
+    text-decoration: none;
+    color: black;
+    font-size: 0.9rem;
+}
+
+header #navbar-pinterest #nav_left #create {
+    display: flex;
+}
+
+header #navbar-pinterest #search {
+    background-color: var(--bg-main);
+    width: 65%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+header #navbar-pinterest #search #bar-search{
+    background-color:  var(--bg-search);
+    border-radius: 30px;
+    width: 96%;
+    height: 70%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+header #navbar-pinterest #search #bar-search span{
+    width: 10%;
+    color: grey;
+}
+
+header #navbar-pinterest #search #bar-search input{
+    background-color: var(--bg-search);
+    width: 85%;
+    border: none;
+    text-decoration: none;
+}
+
+
+header #navbar-pinterest #items-profile {
+    background-color: var(--bg-main);
+    width: 20%;
+    max-width: 150px;
+    display: flex;
+    align-content: stretch;
+    align-items: center;
+}
+
+header #navbar-pinterest #items-profile div{
+    width: 100%;
+}
+
+header #navbar-pinterest #img_user {
+    width: 30px;
+}
+
+/* ESTLOS DE LOS ICONOS #items-profile*/
+#items-profile .material-symbols-outlined {
+    color: #797979;
+}
+
+main {
+    columns: 50px 5;
+}
