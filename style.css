@@ -160,12 +160,18 @@ main #gallery .card_layer {
     justify-content: space-between;
 }
 
+main #gallery .card_layer .saveCard_layer {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
 main #gallery .card_layer .btn_save {
     background-color: red;
     color: white;
     width: 100px;
     height: 40px;
     margin: 13px;
+    padding-top: 16px;
     text-decoration: none;
     border-radius: 90px;
     text-align: center;
