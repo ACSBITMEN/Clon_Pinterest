@@ -41,13 +41,24 @@ header #navbar-pinterest #nav_left div {
     width: 100%;
 }
 
+header #navbar-pinterest #nav_left .opcNav_left {
+    height: 75%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2px;
+}
 /*header #navbar-pinterest #nav_left div:hover {
     background-color: black;
     color: #fff;
 }*/
 
-header #navbar-pinterest #nav_left a:hover {
+header #navbar-pinterest #nav_left .opcNav_left:hover {
     background-color: black;
+}
+
+header #navbar-pinterest #nav_left .opcNav_left:hover a{
     color: #fff;
 }
 
@@ -56,7 +67,7 @@ header #navbar-pinterest #nav_left a:hover {
 }*/
 
 header #navbar-pinterest #nav_left #pinterest-icon:hover {
-    background-color: #fff;
+    background-color: #ffffff;
 }
 
 header #logo_Pinterest {
@@ -96,14 +107,17 @@ header #navbar-pinterest #search #bar-search{
     align-items: center;
 }
 
+/*LUPA en la barra de Navegación*/
 header #navbar-pinterest #search #bar-search span{
-    width: 10%;
-    color: grey;
+    padding-left: 8px;
+    text-align: left;
+    width: 25px;
+    color: gray;
 }
 
 header #navbar-pinterest #search #bar-search input{
     background-color: var(--bg-search);
-    width: 85%;
+    width: 91%;
     border: none;
     text-decoration: none;
 }
@@ -112,15 +126,34 @@ header #navbar-pinterest #search #bar-search input{
 header #navbar-pinterest #items-profile {
     background-color: var(--bg-main);
     width: 20%;
-    max-width: 150px;
+    min-width: 150px;
+    max-width: 200px;
     display: flex;
-    align-content: stretch;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 header #navbar-pinterest #items-profile div{
-    width: 100%;
+    width: 35px;
+    height: 35px;
+    padding: 3px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+header #navbar-pinterest #items-profile div:hover{
+    background-color: var(--bg-search);
+}
+
+header #navbar-pinterest #items-profile div a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
 
 header #navbar-pinterest #img_user {
     width: 30px;
@@ -136,13 +169,16 @@ main {
 }
 
 main #gallery {
-    padding: 90px 10px 10px 10px;
-    columns: 7 200px;
+    padding: 90px 50px 10px 50px;
+    columns: 7 206px;
+    column-gap: 0.9em;
 }
 
 /*Tarjeta que contiene todo la IMG y la capa Hover*/
 main #gallery .card-image {
     position: relative;
+    margin-bottom: 0.6em;
+    display: flex;
 }
 /*Imagen de las tarjetas*/
 main #gallery img {
@@ -151,37 +187,199 @@ main #gallery img {
 }
 
 main #gallery .card_layer {
+    overflow: hidden;
+    background-color: #0300005d;
     position: absolute;
     width: 100%;
-    height: 99%;
+    height: 0;
     top: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: stretch;
+    border-radius: 15px;
 }
 
 main #gallery .card_layer .saveCard_layer {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: relative;
+}
+
+main #gallery .card_layer .card_profile {
+    color: #fff;
+    min-width: 58px;
+    width: 100%;
+    height: 35px;
+    margin: 0 0 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
 }
 
 main #gallery .card_layer .btn_save {
     background-color: red;
     color: white;
-    width: 100px;
-    height: 40px;
+    min-width: 80px;
+    width: 100%;
+    height: 35px;
     margin: 13px;
     padding-top: 16px;
     text-decoration: none;
     border-radius: 90px;
     text-align: center;
+    font-size: 0.9em;
 }
 
 main #gallery .card_layer .footer-card_layer {
-    background-color: rgb(131, 188, 211);
     color: white;
-    width: 230px;
+    width: 100%;
+    padding-bottom: 8px;
     display: flex;
+    justify-content: space-between;
     text-align: center;
     align-items: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.footerRight-card_layer{
+    padding: 0 0 0 7px;
+    display: flex;
+    width: 55%;
+}
+.footerLeft-card_layer{
+    display: flex;
+    width: 45%;
+    justify-content: space-evenly;
+}
+
+/*Boton de "Enlace.com"*/
+main #gallery .card_layer .footer-card_layer .footer-card-pg_layer {
+    background-color: rgb(219, 219, 218);
+    color: black;
+    height: 35px;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 30px;
+}
+
+main #gallery .card_layer .footer-card_layer .footer-card-pg_layer p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1em;
+}
+
+/*BOTONES DE COMPARTIR Y MAS*/
+main #gallery .card_layer .footer-card_layer .btn_footCard {
+    background-color: rgb(219, 219, 218);
+    color: black;
+    width: 38px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 8px;
+}
+
+/*EFECTOS HOVER DE LAS IMAGENES*/
+main #gallery .card-image:hover .card_layer {
+    background-color: #0300005d;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 15px;
+    cursor: move;
+}
+main #gallery .card_layer .btn_save:hover {
+    background-color: rgb(170, 0, 0);
+}
+
+/*Botones footer-card_layer enlace*/
+main #gallery .card_layer .footer-card_layer .footer-card-pg_layer:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+/*Enlace del boton "Enlace.com"*/
+main #gallery .card_layer .footer-card_layer .footer-card-pg_layer a {
+    color: #000;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+/*Iconos del boton "Enlace.com"*/
+main #gallery .card_layer .footer-card_layer .footer-card-pg_layer span {
+    font-size: 1.3em;
+    margin-left: 5px;
+}
+
+/*Botones footer-card_layer Share y More*/
+main #gallery .card_layer .footer-card_layer .btn_footCard:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+/*---------------------------------------------------------------------*/
+/*MEDIA QUERY | PARA PORTATILES*/
+/*---------------------------------------------------------------------*/
+@media screen and (max-width: 1407px){
+    main {
+        background-color: #2864e6;
+    }
+    
+    /*CONVERTIMOS LA SECCION EN 2 */
+    main #gallery {
+        padding: 90px 30px 30px 30px;
+        columns: 6 165px;
+        column-gap: 0.9em;
+    }
+
+        main #gallery .card_layer .footerLeft-card_layer {
+        width: 100%;
+    }
+
+    main #gallery .card_layer .footerLeft-card_layer a{
+        display: flex;
+        text-decoration: none;
+    }
+
+    /*BOTONES DE COMPARTIR Y MAS*/
+    main #gallery .card_layer .footer-card_layer .btn_footCard {
+        background-color: rgb(219, 219, 218);
+        color: black;
+        width: 32px;
+        height: 25px;
+        border-radius: 50%;
+        text-align: center;
+        padding-top: 6px;
+    }
+}
+/*---------------------------------------------------------------------*/
+/*MEDIA QUERY | PARA */
+@media screen and (max-width: 470px){
+    main {
+        background-color: #db4747;
+    }
+    
+    /*CONVERTIMOS LA SECCION EN 2 */
+    main #gallery {
+        padding: 90px 30px 30px 30px;
+        columns: 2 189px;
+        column-gap: 0.9em;
+    }
+
+    header #navbar-pinterest #search #bar-search input{
+        display: none;
+    }
+
 }
