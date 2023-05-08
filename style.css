@@ -100,7 +100,7 @@ header #navbar-pinterest #search {
 header #navbar-pinterest #search #bar-search{
     background-color:  var(--bg-search);
     border-radius: 30px;
-    width: 96%;
+    width: 98%;
     height: 70%;
     margin: 0 auto;
     display: flex;
@@ -109,7 +109,7 @@ header #navbar-pinterest #search #bar-search{
 
 /*LUPA en la barra de Navegación*/
 header #navbar-pinterest #search #bar-search span{
-    padding-left: 8px;
+    padding-left: 2%;
     text-align: left;
     width: 25px;
     color: gray;
@@ -330,12 +330,11 @@ main #gallery .card_layer .footer-card_layer .btn_footCard:hover {
 }
 
 /*---------------------------------------------------------------------*/
+
+
 /*MEDIA QUERY | PARA PORTATILES*/
 /*---------------------------------------------------------------------*/
 @media screen and (max-width: 1407px){
-    main {
-        background-color: #2864e6;
-    }
     
     /*CONVERTIMOS LA SECCION EN 2 */
     main #gallery {
@@ -365,16 +364,55 @@ main #gallery .card_layer .footer-card_layer .btn_footCard:hover {
     }
 }
 /*---------------------------------------------------------------------*/
-/*MEDIA QUERY | PARA */
-@media screen and (max-width: 470px){
-    main {
-        background-color: #db4747;
+
+
+/*MEDIA QUERY | PARA MOVIL*/
+@media screen and (max-width: 500px){
+    /*BARRA DE NAVEGACION
+    
+    SEGMENTO IZQUIERDO DE LA BARRA DE NAVEGACION*/
+    header #navbar-pinterest #nav_left {
+        width: 160px;
+        min-width: 120px;
+    }
+    /*Opcion Hoy y Crear se eliminan*/
+    #navbar-pinterest #nav_left .opcNav_left.movil {
+        display: none;
+    }
+
+    /*SEGMENTO CENTRO DE LA BARRA DE NAVEGACION*/
+    /*Ajustamos el tamaño del segmento centro "#Search"*/
+    header #navbar-pinterest #search {
+        width: auto;
+    }
+    /*Ajustamos el tamaño del contenedor de la lupa e input*/
+    header #navbar-pinterest #search #bar-search{
+        background-color:  var(--bg-main);
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    
+    /*LUPA en la barra de Navegación*/
+    header #navbar-pinterest #search #bar-search span{
+        text-align: center;
+    }
+    /*Input de navegacion (Eliminado)*/
+    header #navbar-pinterest #search #bar-search input{
+        display: none;
+    }
+    
+    /*SEGMENTO DERECHO DE LA BARRA DE NAVEGACION*/
+    /**/
+    header #navbar-pinterest #items-profile {
+        width: auto;
+        max-width: 100%;
     }
     
     /*CONVERTIMOS LA SECCION EN 2 */
     main #gallery {
         padding: 90px 30px 30px 30px;
-        columns: 2 189px;
+        columns: 2 150px;
         column-gap: 0.9em;
     }
 
