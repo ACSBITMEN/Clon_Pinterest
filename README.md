@@ -19,42 +19,42 @@ Un proyecto FlashCode, para poner en practica las enseñanzas de DEVF; consiste 
 ```html
 <!DOCTYPE html>
 <div class="card-image">
-	<img src="img/Img_Main/Img_1.jpg">
-	<div class="card_layer">
-		<div class="saveCard_layer">
-			<a class="btn_save" href="">
- 				Guardar
-			</a>
-			<a class="card_profile" href="">Perfil
-				<span class="material-symbols-outlined">
-					expand_more
-				</span>
-			</a>
-		</div>
-		<div class="footer-card_layer">
-			<div class="footerRight-card_layer">
-				<a class="footer-card-pg_layer">
-					<span class="material-symbols-outlined">
-						north_east
-					</span>
-					<p>
-					Enlace.com
-					</p>
-				</a>
-			</div>
-			<div class="footerLeft-card_layer">
-				<a href="">
-					<span class="material-symbols-outlined btn_footCard">
-						ios_share
-					</span>
-				</a>
-				<a href="">
-					<span class="material-symbols-outlined btn_footCard">
-						more_horiz
-					</span>
-				</a>
-			</div>
-		</div>
+   <img src="img/Img_Main/Img_1.jpg">
+   <div class="card_layer">
+      <div class="saveCard_layer">
+        <a class="btn_save" href="">
+           Guardar
+        </a>
+        <a class="card_profile" href="">Perfil
+           <span class="material-symbols-outlined">
+              expand_more
+           </span>
+        </a>
+      </div>
+      <div class="footer-card_layer">
+	<div class="footerRight-card_layer">
+           <a class="footer-card-pg_layer">
+              <span class="material-symbols-outlined">
+                north_east
+              </span>
+              <p>
+                Enlace.com
+              </p>
+           </a>
 	</div>
+        <div class="footerLeft-card_layer">
+           <a href="">
+              <span class="material-symbols-outlined btn_footCard">
+                ios_share
+              </span>
+           </a>
+           <a href="">
+              <span class="material-symbols-outlined btn_footCard">
+                more_horiz
+              </span>
+           </a>
+         </div>
+      </div>
+   </div>
 </div>
 ```
